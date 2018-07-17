@@ -1,44 +1,44 @@
-/* Message */
-.message {
+/* Thread */
+.user {
     width: 100%;
     background: #b26023;
     display: table-row;
     vertical-align: middle;
 }
 
-.message span:nth-child(1){ /* Author */
-    width: 15%;
+.user span:nth-child(1){ /* Title */
+    width: 30%;
     display: table-cell;
     border: 1px solid #6F3900;
     padding-left: 1%;
 }
 
-.message span:nth-child(2){ /* Message */
-    width: 60%;
+.user span:nth-child(2){ /* Author */
+    width: 30%;
     display: table-cell;
     border: 1px solid #6F3900;
     padding-left: 1%;
 }
 
-.message span:nth-child(3){ /* Date posted */
-    width: 25%;
+.user span:nth-child(3){ /* Date Created */
+    width: 40%;
     display: table-cell;
     border: 1px solid #6F3900;
     padding-left: 1%;
 }
 
 /* Threads */
-.messages {
+.users {
     width:70%;
-    display:table;
+    display: table;
     margin-left: auto;
     margin-right: auto;
 }
 
-.messages div:nth-child(even) {
+.users div:nth-child(even) {
     background: #E68927;
 }
 
-.messages div:nth-child(odd) {
+.users div:nth-child(odd) {
     background: #b26023;
 }

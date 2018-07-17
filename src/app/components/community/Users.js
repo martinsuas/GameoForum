@@ -1,32 +1,32 @@
 import React from 'react';
 import '../../../style.css';
 
-function Message(props) {
+function User(props) {
     return(
-        <div className="message">
+        <div className="user">
             <span>
-                <a onClick={() => props.handleClick(3, props.userId)}>
-                    {props.userId}
+                <a onClick={() => props.handleClick(3, props.username)}>
+                    {props.username}
                 </a>
             </span>
             <span>
-                {props.message}
+                {props.gender}
             </span>
             <span>
-                {props.postingTime}
+                {props.registrationTime}
             </span>
         </div>
     );
 }
 
-class Messages extends React.Component {
+class Users extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             error: null,
             isLoaded: false,
-            messages: [],
-            url:props.url,
+            users: [],
+            url: props.url,
             handleClick: props.handleClick,
         }
     }
@@ -38,7 +38,7 @@ class Messages extends React.Component {
                 (result) => {
                     this.setState({
                         isLoaded: true,
-                        messages: result,
+                        users: result,
                     });
                 },
                 (error) => {
@@ -51,7 +51,7 @@ class Messages extends React.Component {
     }
 
     render() {
-        const {error, isLoaded, messages} = this.state;
+        const {error, isLoaded, users} = this.state;
         if (error) {
             return <div>Error: {error.message}<p/></div>
         }
@@ -59,20 +59,20 @@ class Messages extends React.Component {
             return <div>Loading...</div>
         } else {
             return (
-                <div className="messages">
-                    <div className="message" id="column_header">
+                <div className="users">
+                    <div className="user" id="column_header">
                         <span>User</span>
-                        <span>Message</span>
-                        <span>Posted at:</span>
+                        <span>Gender</span>
+                        <span>Joined at:</span>
                     </div>
-                    {messages.map(
-                        message =>
-                            <Message key={message.messageId}
-                                     threadId={message.threadId}
-                                     userId={message.userId}
-                                     message={message.message}
-                                     postingTime={message.postingTime}
-                                     handleClick={this.state.handleClick}
+                    {users.map(
+                        user =>
+                            <User key={user.userId}
+                                    userId={user.userId}
+                                    username={user.username}
+                                    gender={user.gender}
+                                    registrationTime={user.registrationTime}
+                                    handleClick={this.state.handleClick}
                             />
                     )}
                 </div>
@@ -80,4 +80,5 @@ class Messages extends React.Component {
         }
     }
 }
-export default Messages;
+
+export default Users;

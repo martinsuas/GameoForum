@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style.css';
-import './header/SiteBar';
-import SiteBar from "./header/SiteBar";
+import './SiteBar';
+import SiteBar from "./SiteBar";
 
 function Header(props) {
     return (

@@ -32,7 +32,6 @@
 .forums {
     width:70%;
     display:table;
-    table-layout: fixed;
     margin-left: auto;
     margin-right: auto;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style.css'
+import '../style.css'
 
 class SiteBar extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class SiteBar extends React.Component {
                 {key:"register", value:{name:"Register", link:""}},
                 {key:"about", value:{name:"About", link:""}},
             ],
-            current: "home", // Default
+            current: "app", // Default
         };
     }
 
@@ -22,7 +22,7 @@ class SiteBar extends React.Component {
                     this.state.menu_items.map
                     (
                     obj =>
-                        <span id={this.state.module == obj.key ? "current":""}>
+                        <span id={this.state.current === obj.key ? "current":""}>
                             <a href={obj.value.link}>
                                 {obj.value.name}
                             </a>

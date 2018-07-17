@@ -4,7 +4,9 @@ import '../../../style.css'
 function Forum(props) {
     return(
         <div className="forum">
-            <button>{props.name}
+            <button
+                onClick={() => props.handleClick(1, "forum:" + props.forumId)}>
+                {props.name}
             <span>{props.description}</span>
             </button>
             <div>
@@ -22,6 +24,7 @@ class Forums extends React.Component {
             isLoaded: false,
             forums: [],
             url:props.url,
+            handleClick: props.handleClick,
         }
     }
 
@@ -57,8 +60,10 @@ class Forums extends React.Component {
                     {forums.map(
                         forum =>
                             <Forum key={forum.forumId}
+                                   forumId={forum.forumId}
                                    name={forum.name}
                                    description={forum.description}
+                                   handleClick={this.state.handleClick}
                             />
                     )}
                 </div>
