@@ -1,0 +1,46 @@
+/* Forum */
+.forum {
+    width: 100%;
+    background: #b26023;
+    display: table-row;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.forum button { /* Name */
+    width: 100%;
+    text-decoration: solid;
+    font-size: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    background: #E68927;
+    color: #6F3900;
+    border: 1px solid #6F3900;
+}
+
+.forum button span { /* Description */
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: bottom;
+    color: black;
+}
+
+/* Forums */
+.forums {
+    width:70%;
+    display:table;
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forums div:nth-child(even) {
+    background: #E68927;
+}
+
+.forums div:nth-child(odd) {
+    background: #b26023;
+}

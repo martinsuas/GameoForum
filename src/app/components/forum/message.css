@@ -1,0 +1,42 @@
+/* Message */
+.message {
+    width: 100%;
+    background: #b26023;
+    display: table-row;
+    vertical-align: middle;
+}
+
+.message span:nth-child(1){ /* Author */
+    width: 15%;
+    display: table-cell;
+    border: 1px solid #6F3900;
+    padding-left: 1%;
+}
+
+.message span:nth-child(2){ /* Message */
+    width: 60%;
+    display: table-cell;
+    border: 1px solid #6F3900;
+    padding-left: 1%;
+}
+
+.message span:nth-child(3){ /* Date posted */
+    width: 25%;
+    display: table-cell;
+    border: 1px solid #6F3900;
+    padding-left: 1%;
+}
+
+/* Threads */
+.messages {
+    width:70%;
+    display:table;
+}
+
+.messages div:nth-child(even) {
+    background: #E68927;
+}
+
+.messages div:nth-child(odd) {
+    background: #b26023;
+}

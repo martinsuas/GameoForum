@@ -1,0 +1,15 @@
+@import url("components/forum/thread.css");
+@import url("components/forum/forum.css");
+@import url("components/forum/message.css");
+@import url("components/navigationbar.css");
+
+.app {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    text-align: center;
+    min-width: 100%;
+    width:50%;
+    background: green;
+    color: red;
+}

@@ -1,0 +1,42 @@
+/* Thread */
+.thread {
+    width: 100%;
+    background: #b26023;
+    display: table-row;
+    vertical-align: middle;
+}
+
+.thread span:nth-child(1){ /* Title */
+    width: 60%;
+    display: table-cell;
+    border: 1px solid #6F3900;
+    padding-left: 1%;
+}
+
+.thread span:nth-child(2){ /* Author */
+    width: 15%;
+    display: table-cell;
+    border: 1px solid #6F3900;
+    padding-left: 1%;
+}
+
+.thread span:nth-child(3){ /* Date Created */
+    width: 25%;
+    display: table-cell;
+    border: 1px solid #6F3900;
+    padding-left: 1%;
+}
+
+/* Threads */
+.threads {
+    width:70%;
+    display: table;
+}
+
+.threads div:nth-child(even) {
+    background: #E68927;
+}
+
+.threads div:nth-child(odd) {
+    background: #b26023;
+}

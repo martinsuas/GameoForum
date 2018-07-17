@@ -1,0 +1,77 @@
+/*Footer*/
+#footer {
+    border-bottom: 7px solid #6F3900;
+    border-color: #6F3900;
+    min-height: 120px;
+    min-width: 700px;
+    background-color: #6F3900;
+    color: white;
+    width: 100%;
+    margin-bottom: 2%;
+    vertical-align:center;
+}
+
+#footer a {
+    color: #E68927;
+}
+
+#f_left{
+    font-size: 0.8em;
+    width:2%;
+    float: left;
+    vertical-align:center;
+    padding-left:2%;
+
+}
+
+#f_left p {
+    height:100%;
+    display: inline-block;
+    vertical-align:center;
+}
+
+#f_left p:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#f_center{
+    width:50%;
+    font-size: 0.8em;
+    list-style: none;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-left: 1px solid #EFECCA;
+    border-right: 1px solid #EFECCA;
+}
+
+#f_center p{
+    margin: 0px;
+    text-align:center;
+}
+
+#f_center table{
+    text-align:center;
+    width:100%
+}
+
+#f_center table td{
+    vertical-align: top;
+    width:20%; /* 100 / # of categories */
+}
+#f_center table td ul{
+    list-style: none;
+    padding:0;
+    text-align:center;
+}
+
+#f_right{
+    padding-right:2%;
+    float: right;
+    font-size: 0.8em;
+    width: 22%;
+    height:auto;
+    color: white;
+}
