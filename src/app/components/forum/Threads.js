@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../style.css';
+import {getDateTime} from './../../util/DateUtil';
 
 function Thread(props) {
     return(
@@ -10,12 +11,12 @@ function Thread(props) {
                 </a>
             </span>
             <span>
-                <a onClick={() => props.handleClick(3, props.userId)}>
-                    {props.userId}
+                <a onClick={() => props.handleClick(3, props.authorId)}>
+                    {props.author}
                 </a>
             </span>
             <span>
-                {props.creationTime}
+                {getDateTime(props.creationTime)}
             </span>
         </div>
     );
@@ -72,7 +73,8 @@ class Threads extends React.Component {
                             <Thread key={thread.threadId}
                                     threadId={thread.threadId}
                                     title={thread.title}
-                                    userId={thread.userId}
+                                    author={thread.author}
+                                    authorId={thread.authorId}
                                     creationTime={thread.creationTime}
                                     handleClick={this.state.handleClick}
                             />

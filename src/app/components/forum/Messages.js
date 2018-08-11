@@ -1,19 +1,20 @@
 import React from 'react';
 import '../../../style.css';
+import {getDateTime} from './../../util/DateUtil';
 
 function Message(props) {
     return(
         <div className="message">
             <span>
-                <a onClick={() => props.handleClick(3, props.userId)}>
-                    {props.userId}
+                <a onClick={() => props.handleClick(3, props.posterId)}>
+                    {props.poster}
                 </a>
             </span>
             <span>
                 {props.message}
             </span>
             <span>
-                {props.postingTime}
+                {getDateTime(props.postingTime)}
             </span>
         </div>
     );
@@ -69,7 +70,8 @@ class Messages extends React.Component {
                         message =>
                             <Message key={message.messageId}
                                      threadId={message.threadId}
-                                     userId={message.userId}
+                                     poster={message.poster}
+                                     posterId={message.posterId}
                                      message={message.message}
                                      postingTime={message.postingTime}
                                      handleClick={this.state.handleClick}
